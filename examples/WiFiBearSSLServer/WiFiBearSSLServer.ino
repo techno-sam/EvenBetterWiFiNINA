@@ -20,7 +20,7 @@
 
 //BetterWiFiNINA library
 //Obtain at https://github.com/gershnik/BetterWiFiNINA
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 //ArduinoBearSSL library
 //Obtain via Library Manager or https://github.com/arduino-libraries/ArduinoBearSSL

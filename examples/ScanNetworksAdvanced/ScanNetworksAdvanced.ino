@@ -16,7 +16,7 @@
 
 
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 void setup() {
   //Initialize serial and wait for port to open:

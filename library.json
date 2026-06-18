@@ -1,8 +1,8 @@
 {
     "$schema": "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
-    "name": "BetterWiFiNINA",
-    "version": "1.4.1",
-    "description": "An improved fork of WiFiNINA library",
+    "name": "EvenBetterWiFiNINA",
+    "version": "2.0.1",
+    "description": "An updated fork of BetterWiFiNINA library, an improved fork of WiFiNINA library",
     "keywords": [
         "NINA",
         "Arduino",
@@ -11,19 +11,17 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/gershnik/BetterWiFiNINA"
+        "url": "https://github.com/techno-sam/EvenBetterWiFiNINA"
     },
     "authors": {
-        "name": "Eugene Gershnik",
-        "email": "gershnik@hotmail.com",
-        "url": "https://gershnik.github.io/contact/",
+        "name": "Sam Wagenaar",
         "maintainer": true
     },
     "license": "LGPL-3.0-or-later",
     "frameworks": [
         "Arduino"
     ],
-    "headers": "BetterWiFiNINA.h",
+    "headers": "EvenBetterWiFiNINA.h",
     "export": {
         "exclude": [
             ".github",

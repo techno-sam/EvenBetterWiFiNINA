@@ -33,7 +33,7 @@ WiFiServer server(port);
 
 ```
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 char ssid[] = "myNetwork";          //  your network SSID (name)
 char pass[] = "myPassword";   // your network password
@@ -93,7 +93,7 @@ server.begin()
 
 ```
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 char ssid[] = "lamaison";          //  your network SSID (name)
 char pass[] = "tenantaccess247";   // your network password
@@ -243,7 +243,7 @@ server.write(buffer, size);
 
 ```
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 char ssid[] = "yourNetwork";
 char pass[] = "yourPassword";
@@ -529,7 +529,7 @@ server.peek()
 …
 
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 char ssid[] = SECRET_SSID;      // your network SSID (name)
 char pass[] = SECRET_PASS;      // your network password

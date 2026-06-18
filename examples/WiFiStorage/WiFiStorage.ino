@@ -3,7 +3,7 @@
   APIs are modeled on SerialFlash library (not on SD) to speed up operations and avoid buffers.
 */
 
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 void setup() {
 

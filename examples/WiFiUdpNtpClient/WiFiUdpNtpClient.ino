@@ -11,7 +11,7 @@
  */
 
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 int status = WL_IDLE_STATUS;
 #include "arduino_secrets.h" 

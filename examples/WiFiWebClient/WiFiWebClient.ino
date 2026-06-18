@@ -17,7 +17,7 @@
 
 
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 #include <errno.h>
 
 #include "arduino_secrets.h" 

@@ -33,7 +33,7 @@ WiFi.begin(ssid, keyIndex, key);
 #### Example
 
 ```cpp
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 //SSID of your network
 char ssid[] = "yourNetwork";
@@ -104,7 +104,7 @@ WiFi.beginAP(ssid, passphrase, channel);
 #### Example
 
 ```cpp
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 //SSID of your network
 char ssid[] = "yourNetwork";
@@ -165,7 +165,7 @@ WiFi.beginEnterprise(ssid, username, password, identity, ca);
 #### Example
 
 ```cpp
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 char ssid[] = SECRET_SSID;  // your WPA2 enterprise network SSID (name)
 char user[] = SECRET_USER;  // your WPA2 enterprise username
@@ -257,7 +257,7 @@ WiFi.config(ip, dns, gateway, subnet);
 This example shows how to set the static IP address, `192.168.0.177`, of the LAN network to the WiFi:
 
 ```cpp
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 // the IP address for the shield:
 IPAddress ip(192, 168, 0, 177);    
@@ -317,7 +317,7 @@ WiFi.setDNS(dns_server1, dns_server2)
 This example shows how to set the Google DNS (8.8.8.8). You can set it as an object IPAddress.
 
 ```cpp
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 // the IP address for the shield:
 IPAddress dns(8, 8, 8, 8);  //Google DNS  
@@ -460,7 +460,7 @@ WiFi.SSID(wifiAccessPoint)
 #### Example
 
 ```cpp
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 
 void setup()
@@ -515,7 +515,7 @@ A byte array containing the MAC address of the router the WiFi shield is current
 #### Example
 
 ```cpp
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 //SSID of your network
 char ssid[] = "yourNetwork";
@@ -579,7 +579,7 @@ WiFi.RSSI(wifiAccessPoint);
 #### Example
 
 ```cpp
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 //SSID of your network
 char ssid[] = "yourNetwork";
@@ -699,7 +699,7 @@ byte : value represents the type of encryption
 
 ```cpp
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 //SSID of your network
 char ssid[] = "yourNetwork";
@@ -753,7 +753,7 @@ See [ScanNetworks](https://github.com/gershnik/BetterWiFiNINA/tree/mainline/exam
 ```cpp
 
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 void setup() {
   // print your MAC address:
@@ -909,7 +909,7 @@ WiFi.status()
 
 ```cpp
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 char ssid[] = "yourNetwork";                     // your network SSID (name)
 char key[] = "D0D0DEADF00DABBADEAFBEADED";       // your network key
@@ -973,7 +973,7 @@ WiFi.macAddress(mac)
 
 ```cpp
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 char ssid[] = "yourNetwork";     // the name of your network
 int status = WL_IDLE_STATUS;     // the WiFi radio's status

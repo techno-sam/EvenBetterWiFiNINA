@@ -1,8 +1,8 @@
 # BetterWiFiNINA
 
-[![Check Arduino status](https://github.com/gershnik/BetterWiFiNina/actions/workflows/check-arduino.yml/badge.svg)](https://github.com/gershnik/BetterWiFiNina/actions/workflows/check-arduino.yml)
-[![Compile Examples status](https://github.com/gershnik/BetterWiFiNina/actions/workflows/compile-examples.yml/badge.svg)](https://github.com/gershnik/BetterWiFiNina/actions/workflows/compile-examples.yml)
-[![Spell Check status](https://github.com/gershnik/BetterWiFiNina/actions/workflows/spell-check.yml/badge.svg)](https://github.com/gershnik/BetterWiFiNina/actions/workflows/spell-check.yml)
+[![Check Arduino status](https://github.com/techno-sam/EvenBetterWiFiNina/actions/workflows/check-arduino.yml/badge.svg)](https://github.com/techno-sam/EvenBetterWiFiNina/actions/workflows/check-arduino.yml)
+[![Compile Examples status](https://github.com/techno-sam/EvenBetterWiFiNina/actions/workflows/compile-examples.yml/badge.svg)](https://github.com/techno-sam/EvenBetterWiFiNina/actions/workflows/compile-examples.yml)
+[![Spell Check status](https://github.com/techno-sam/EvenBetterWiFiNina/actions/workflows/spell-check.yml/badge.svg)](https://github.com/techno-sam/EvenBetterWiFiNina/actions/workflows/spell-check.yml)
 
 
 <!-- Links -->
@@ -79,17 +79,17 @@ All relevant examples in this repository have been changed to use `WiFiSocket` i
 ## Usage
 
 ```cpp
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 ```
 
 ## Integration
 
 ### Arduino IDE
 
-BetterWiFiNINA library is available from the **Library Manager**.
+EvenBetterWiFiNINA library is **not** available from the **Library Manager**. (Because it is unlikely to be maintained long-term so you shouldn't depend on it.)
 
-Alternatively you can download `BetterWiFiNINA-x.y.z.tar.gz` from the desired release of this library on 
-[Releases](https://github.com/gershnik/BetterWiFiNINA/releases) page and unpack it into your Arduino libraries folder. 
+Alternatively you can download `EvenBetterWiFiNINA-x.y.z.tar.gz` from the desired release of this library on 
+[Releases](https://github.com/techno-sam/EvenBetterWiFiNINA/releases) page and unpack it into your Arduino libraries folder. 
 
 ### PlatformIO
 
@@ -97,14 +97,14 @@ Use either:
 
 ```ini
 lib_deps =
-    gershnik/BetterWiFiNINA@X.Y.Z
+    techno-sam/EvenBetterWiFiNINA@X.Y.Z
 ```
 
 or
 
 ```ini
 lib_deps =
-    https://github.com/gershnik/BetterWiFiNINA#vX.Y.Z
+    https://github.com/techno-sam/EvenBetterWiFiNINA#vX.Y.Z
 ```
 
 to your `platformio.ini` file where X.Y.Z is the desired version.
@@ -114,6 +114,7 @@ Note that the second form allows you to reference unreleased code at specific br
 
 ## License
 
+Copyright (c) 2026 Sam Wagenaar. All rights reserved.<br>
 Copyright (c) 2024 Eugene Gershnik. All rights reserved.<br>
 Copyright (c) 2018 Arduino SA. All rights reserved.<br>
 Copyright (c) 2011-2014 Arduino LLC. All right reserved.<br>

@@ -44,7 +44,7 @@ WiFiClient client;
 
 ```
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 char ssid[] = "myNetwork";          //  your network SSID (name)
 char pass[] = "myPassword";   // your network password
@@ -124,7 +124,7 @@ last revision November 2015
 */
 
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 #include "arduino_secrets.h"
 ///////please enter your sensitive data in the Secret tab/arduino_secrets.h
@@ -252,7 +252,7 @@ client.connected()
 
 ```
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 char ssid[] = "myNetwork";          //  your network SSID (name)
 char pass[] = "myPassword";   // your network password
@@ -334,7 +334,7 @@ client.connect(URL, port)
 
 ```
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 char ssid[] = "myNetwork";          //  your network SSID (name)
 char pass[] = "myPassword";   // your network password
@@ -425,7 +425,7 @@ Returns true if the connection succeeds, false if not.
 
 
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 char ssid[] = "yourNetwork"; //  your network SSID (name)
 char pass[] = "secretPassword";    // your network password (use for WPA, or use as key for WEP)
@@ -674,7 +674,7 @@ client.available()
 
 ```
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 char ssid[] = "myNetwork";          //  your network SSID (name)
 char pass[] = "myPassword";   // your network password
@@ -762,7 +762,7 @@ client.peek()
 …
 
 #include <SPI.h>
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 #include "arduino_secrets.h"
 char ssid[] = SECRET_SSID;      // your network SSID (name)

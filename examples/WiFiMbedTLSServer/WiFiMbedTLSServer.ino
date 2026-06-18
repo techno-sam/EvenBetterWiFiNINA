@@ -13,7 +13,7 @@
 
 //BetterWiFiNINA library
 //Obtain at https://github.com/gershnik/BetterWiFiNINA
-#include <BetterWiFiNINA.h>
+#include <EvenBetterWiFiNINA.h>
 
 //For better performance uncomment the line below to use MbedNanoTLS library
 //#define USE_MBED_NANO_TLS 1
