@@ -23,7 +23,7 @@
 #include <stdint.h>
 
 #include "Arduino.h"
-#include <spi_drv.h>
+#include <Arduino_SpiNINA.h>
 #include "utility/wifi_drv.h"
 
 #define _DEBUG_

@@ -23,7 +23,7 @@
 #include <errno.h>
 
 #include "socket_drv.h"
-#include "spi_drv.h"
+#include <Arduino_SpiNINA.h>
 
 extern "C" {
     #include "wifi_spi.h"
@@ -528,6 +528,68 @@ int32_t SocketDrv::sendTo(uint8_t s, const void * buf, uint16_t size,
     }
 }
 
+/* BEGIN reimplementation of old API missing in common lib */
+
+#define WAIT_START_CMD__(x) SpiDrv::waitSpiChar(START_CMD)
+
+#define IF_CHECK_START_CMD__(x)                      \
+    if (!WAIT_START_CMD__(_data))                 \
+    {                                           \
+        TOGGLE_TRIGGER()                        \
+        WARN("Error waiting START_CMD");        \
+        return 0;                               \
+    }else                                       \
+
+#define CHECK_DATA__(check, x)                   \
+        if (!SpiDrv::readAndCheckChar(check, &x))   \
+        {                                               \
+                TOGGLE_TRIGGER()                        \
+            WARN("Reply error");                        \
+            INFO2(check, (uint8_t)x);                                                   \
+            return 0;                                   \
+        }else                                           \
+
+static int SpiDrv__waitResponseDataParams(uint8_t cmd, uint8_t numParam, tDataParam* params)
+{
+    char _data = 0;
+    int i =0, ii = 0;
+
+
+    IF_CHECK_START_CMD__(_data)
+    {
+        CHECK_DATA__(cmd | REPLY_FLAG, _data){};
+
+        uint8_t _numParam = SpiDrv::readChar();
+        if (_numParam != 0)
+        {
+            for (i=0; i<_numParam; ++i)
+            {
+                params[i].dataLen = SpiDrv::readParamLen16();
+                for (ii=0; ii<params[i].dataLen; ++ii)
+                {
+                    // Get Params data
+                    params[i].data[ii] = SpiDrv::spiTransfer(DUMMY_DATA);
+                }
+            }
+        } else
+        {
+            WARN("Error numParam == 0");
+            return 0;
+        }
+
+        if (numParam != _numParam)
+        {
+            WARN("Mismatch numParam");
+            return 0;
+        }
+
+        SpiDrv::readAndCheckChar(END_CMD, &_data);
+    }
+    return 1;
+}
+
+/* END reimplementation */
+
 int32_t SocketDrv::recvFrom(uint8_t s, void * buf, uint16_t size, 
                             arduino::IPAddress & remoteIpAddress, uint16_t & remotePort) {
     g_lastError.reset();
@@ -569,7 +631,7 @@ int32_t SocketDrv::recvFrom(uint8_t s, void * buf, uint16_t size,
             {0, (char*)&remotePortTmp},
             {0, (char*)buf}
         };
-        if (!SpiDrv::waitResponseParams(cmd, PARAM_NUMS_3, params)) {
+        if (!SpiDrv__waitResponseDataParams(cmd, PARAM_NUMS_3, params)) {
             WARN("error waitResponse");
             g_lastError = SocketDrv::Failure;
             return -1;
